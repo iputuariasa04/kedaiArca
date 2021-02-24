@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keday Arca</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="cirkel"></div>
+        <nav>
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <ul>
+                <li><a href="">
+                    <span>Home</span>
+                    <span>Home</span>
+                </a></li>
+                <li><a href="">
+                    <span>Product</span>
+                    <span>Product</span>
+                </a></li>
+                <li><a href="">
+                    <span>Services</span>
+                    <span>Sercices</span>
+                </a></li>
+                <li><a href="">
+                    <span>Contact</span>
+                    <span>Contact</span>
+                </a></li>
+                <li><a href="">
+                    <span>About</span>
+                    <span>About</span>
+                </a></li>
+            </ul>
+            <div class="menu-toggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="konten">
+            <div class="kata">
+                <h2>It's not just Tolol<br>It's <span>Makanan</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, perspiciatis velit ducimus incidunt voluptatum sequi similique nesciunt eaque laborum sapiente, tenetur aliquid voluptas id. Tempore consectetur et rerum officiis vitae.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="gambar">
+                <img src="img/menu3.png" alt="" class="burger">
+            </div>
+        </div>
+        <ul class="img">
+            <li><img src="img/img1.png" onclick="imgSlider('img/menu3.png');changeCirkel('#017143')" alt=""></li>
+            <li><img src="img/img2.png" onclick="imgSlider('img/menu2.png');changeCirkel('lawngreen')" alt=""></li>
+            <li><img src="img/img3.png" onclick="imgSlider('img/menu1.png');changeCirkel('#d752b1')" alt=""></li>
+        </ul>
+        <ul class="medsos">
+            <li><a href=""><img src="img/facebook.png" alt=""></a></li>
+            <li><a href=""><img src="img/ig.png" alt=""></a></li>
+            <li><a href=""><img src="img/wa.png" alt=""></a></li>
+        </ul>
+    </div>
+<script>
+    const menuToggle = document.querySelector('.menu-toggle input');
+    const nav = document.querySelector('.container nav ul');
+
+    menuToggle.addEventListener('click', function(){
+        nav.classList.toggle('slide');
+    })
+
+    function imgSlider(anything){
+        document.querySelector('.burger').src = anything;
+    }
+
+    function changeCirkel(color){
+        const cirkel = document.querySelector('.cirkel');
+
+        cirkel.style.backgroundColor = color;
+    }
+</script>
+</body>
+</html>
