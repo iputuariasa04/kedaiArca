@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keday Arca</title>
+    <title>Kedai Arca</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
-        <div class="cirkel"></div>
-        <nav>
+        <div class="circle"></div>
+        <div class="nav">
             <div class="logo">
                 <img src="img/logo.png" alt="">
             </div>
@@ -25,7 +25,7 @@
                 </a></li>
                 <li><a href="">
                     <span>Services</span>
-                    <span>Sercices</span>
+                    <span>Services</span>
                 </a></li>
                 <li><a href="">
                     <span>Contact</span>
@@ -42,45 +42,48 @@
                 <span></span>
                 <span></span>
             </div>
-        </nav>
-        <div class="konten">
-            <div class="kata">
-                <h2>It's not just Tolol<br>It's <span>Makanan</span></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, perspiciatis velit ducimus incidunt voluptatum sequi similique nesciunt eaque laborum sapiente, tenetur aliquid voluptas id. Tempore consectetur et rerum officiis vitae.</p>
-                <a href="#">Read More</a>
-            </div>
-            <div class="gambar">
-                <img src="img/menu3.png" alt="" class="burger">
-            </div>
         </div>
-        <ul class="img">
-            <li><img src="img/img1.png" onclick="imgSlider('img/menu3.png');changeCirkel('#017143')" alt=""></li>
-            <li><img src="img/img2.png" onclick="imgSlider('img/menu2.png');changeCirkel('lawngreen')" alt=""></li>
-            <li><img src="img/img3.png" onclick="imgSlider('img/menu1.png');changeCirkel('#d752b1')" alt=""></li>
-        </ul>
-        <ul class="medsos">
-            <li><a href=""><img src="img/facebook.png" alt=""></a></li>
-            <li><a href=""><img src="img/ig.png" alt=""></a></li>
-            <li><a href=""><img src="img/wa.png" alt=""></a></li>
-        </ul>
+
+        <div class="konten">
+            <h2>It's not just Tolol <br>It's a <span>Makanan</span></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quos vel qui tempore nobis. Cum necessitatibus nisi, dolore laudantium iste dicta impedit assumenda. Minus veritatis, consequuntur cumque placeat dolorum sapiente.</p>
+            <a href="">Read More</a>
+        </div>
+
+        <div class="imgkonten">
+            <img src="img/item1.png" alt="" class="menu">
+        </div>
+        <div class="medsos">
+            <ul>
+                <li><a href=""><img src="img/fb.png" alt=""></a></li>
+                <li><a href=""><img src="img/igb.png" alt=""></a></li>
+                <li><a href=""><img src="img/wab.png" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><img src="img/menu1.png" alt="" onclick="imgSlider('img/menu1.png');circleColor('#017143')"></li>
+                <li><img src="img/menu2.png" alt="" onclick="imgSlider('img/menu2.png');circleColor('rgb(250, 237, 116)')"></li>
+                <li><img src="img/menu3.png" alt="" onclick="imgSlider('img/menu3.png');circleColor('#d752b1')"></li>
+            </ul>
+        </div>
     </div>
 <script>
+    function imgSlider(anything){
+        document.querySelector('.menu'). src = anything;
+    }
+
+    function circleColor(color) {
+        const circle = document.querySelector('.circle');
+        circle.style.backgroundColor = color;
+    }
+
     const menuToggle = document.querySelector('.menu-toggle input');
-    const nav = document.querySelector('.container nav ul');
+    const nav = document.querySelector('.container .nav ul');
 
     menuToggle.addEventListener('click', function(){
         nav.classList.toggle('slide');
     })
-
-    function imgSlider(anything){
-        document.querySelector('.burger').src = anything;
-    }
-
-    function changeCirkel(color){
-        const cirkel = document.querySelector('.cirkel');
-
-        cirkel.style.backgroundColor = color;
-    }
 </script>
 </body>
 </html>
